@@ -84,11 +84,7 @@ export const ShowOneFullBlog = () => {
     if (
       user?.userDetails?.id === userId ||
       user?.userDetails?.isAdmin === true
-    ) {
-      setAuthor(true);
-    } else {
-      navigate(HOME);
-    }
+    ) setAuthor(true);
   }, [user]);
 
   return (

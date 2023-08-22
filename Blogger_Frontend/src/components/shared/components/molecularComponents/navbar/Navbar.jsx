@@ -26,6 +26,7 @@ export const Navbar = () => {
   );
   const [menuOpen, setMenuOpen] = useState(false);
   const [username, setUsername] = useState(null);
+  console.log(username,'username');
 
   const handleHome = () => {
     dispatch(setHomeClick());

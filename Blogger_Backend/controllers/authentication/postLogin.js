@@ -10,7 +10,7 @@ export const postLogin = async(req, res) => {
             email,
             password
         } = req.body;
-
+        
         // Check user exists or not
         const user = await User.findOne({ email: email.toLowerCase() })
         if(!user) return res.status(409).send('Email id is not registered yet')
@@ -51,6 +51,7 @@ export const postLogin = async(req, res) => {
         }
         
     } catch (error) {
+        console.log(error, 'error');
         res.status(500).send("Failed, please try later")
     }
 }

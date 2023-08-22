@@ -42,12 +42,14 @@ export const postRegister = async(req, res) => {
             },
             process.env.JWT_SECRET_KEY
             )
+        const username = user.firstname + " " + user.lastname;    
         
         return res.status(201).json({
             userDetails: {
                 token,
                 email: user.email,
-                id: user._id,
+                id: user._id,   
+                username
             }
         })    
     } catch (error) {
