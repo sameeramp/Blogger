@@ -1,16 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  Login,
-  Register,
-  Home,
-  Media,
-  Contact,
-  CreateBlog,
-  ShowBlogs,
-  ShowOneFullBlog,
-  UpdateBlog,
-  NotFoundPage,
-} from "./components";
+// import {
+//   Login,
+//   Register,
+//   Home,
+//   Media,
+//   Contact,
+//   CreateBlog,
+//   ShowBlogs,
+//   ShowOneFullBlog,
+//   UpdateBlog,
+//   NotFoundPage,
+// } from "./components";
+import { Login} from "./components/login/Component.jsx";
+import {   Register,
+} from "./components/register/Component.jsx";
+import { Media} from "./components/media";
+import { Contact} from "./components/contact";
 import {
   HOME,
   HOME_SEARCH,
@@ -29,6 +34,12 @@ import {
   UPDATE_BLOGS,
   NOT_FOUND,
 } from "./components/constants";
+import { Home } from "./components/home/Component.jsx";
+import { CreateBlog } from "./components/blog/createBlog/index.js";
+import { ShowBlogs } from "./components/blog/showBlogs/index.js";
+import { UpdateBlog } from "./components/blog/updateBlog/index.js";
+import { ShowOneFullBlog } from "./components/blog/showOneFullBlog/index.js";
+import {NotFoundPage} from './components/notFoundPage/index.js';
 
 function App() {
   return (

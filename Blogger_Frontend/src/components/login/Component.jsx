@@ -1,34 +1,96 @@
 import { useState, useEffect, useReducer } from "react";
 import "../shared/styles/Authentication.scss";
+// import {
+//   ErrorMsg,
+//   Heading2,
+//   InputField,
+//   Label,
+//   SubmitButton,
+// } from "../shared/components";
 import {
   ErrorMsg,
+} from "../shared/components/atomicComponents/ErrorMsg.jsx";
+import {
   Heading2,
+} from "../shared/components/atomicComponents/Heading.jsx";
+import {
   InputField,
+} from "../shared/components/atomicComponents/InputField.jsx";
+import {
   Label,
+} from "../shared/components/atomicComponents/Label.jsx";
+import {
   SubmitButton,
-} from "../shared/components";
-import { useFocus } from "../customHooks";
+} from "../shared/components/atomicComponents/SubmitButton.jsx";
+
+
+import { useFocus } from "../customHooks/useFocus.js";
+// import {
+//   changeToSmallCase,
+//   formReducer,
+//   isValidEmail,
+//   isValidPasswrd,
+//   trimElement,
+// } from "../shared/utils";
+import { changeToSmallCase } from "../shared/utils/generalFunc.js";
+import { formReducer } from "../shared/utils/reducerHandler.js";
+import { isValidEmail } from "../shared/utils/validaton.js";
+import { isValidPasswrd } from "../shared/utils/validaton.js";
+import { trimElement } from "../shared/utils/generalFunc.js";
+
+// import {
+//   AUTH_ERROR_LOGIN,
+//   BUTTON_NAME,
+//   EMAIL_ERROR,
+//   EMAIL_INPUT_NAME,
+//   EMAIL_PLACEHOLDER,
+//   LOGIN_HEADING,
+//   FIELD_NULL_ERROR,
+//   PASSWORD_ERROR,
+//   PASSWORD_INPUT_NAME,
+//   PASSWORD_PLACEHOLDER,
+//   HOME,
+//   REGISTER,
+// } from "../constants";
+
 import {
-  changeToSmallCase,
-  formReducer,
-  isValidEmail,
-  isValidPasswrd,
-  trimElement,
-} from "../shared/utils";
+  AUTH_ERROR_LOGIN
+} from "../constants/authentication.js";
 import {
-  AUTH_ERROR_LOGIN,
-  BUTTON_NAME,
-  EMAIL_ERROR,
-  EMAIL_INPUT_NAME,
-  EMAIL_PLACEHOLDER,
-  LOGIN_HEADING,
-  FIELD_NULL_ERROR,
-  PASSWORD_ERROR,
-  PASSWORD_INPUT_NAME,
-  PASSWORD_PLACEHOLDER,
-  HOME,
-  REGISTER,
-} from "../constants";
+  BUTTON_NAME
+} from "../constants/authentication.js";
+import {
+  EMAIL_ERROR
+} from "../constants/authentication.js";
+import {
+  EMAIL_INPUT_NAME
+} from "../constants/authentication.js";
+import {
+  EMAIL_PLACEHOLDER
+} from "../constants/authentication.js";
+import {
+  LOGIN_HEADING
+} from "../constants/authentication.js";
+import {
+  FIELD_NULL_ERROR
+} from "../constants/authentication.js";
+
+import {
+  PASSWORD_ERROR
+} from "../constants/authentication.js";
+import {
+  PASSWORD_INPUT_NAME
+} from "../constants/authentication.js";
+import {
+  PASSWORD_PLACEHOLDER
+} from "../constants/authentication.js";
+import {
+  HOME
+} from "../constants/routePaths.js";
+import {
+  REGISTER
+} from "../constants/routePaths.js";
+
 
 import { reset, signin } from "../../features/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";

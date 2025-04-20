@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { saveContactDetails } from '../controllers';
+import { saveContactDetails } from '../controllers/contact/saveContactDetails.js';
 
 router.post('/contactus', saveContactDetails);
 

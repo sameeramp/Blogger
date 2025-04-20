@@ -1,4 +1,4 @@
-import { ContactUs } from "../../models";
+import { ContactUs } from "../../models/contact.js";
 import nodemailer from 'nodemailer';
 
 export const saveContactDetails = async(req, res) => {

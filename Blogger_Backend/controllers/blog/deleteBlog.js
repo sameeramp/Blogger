@@ -1,4 +1,4 @@
-import { Blog } from '../../models';
+import { Blog } from '../../models/blog.js';
 
 export const deleteBlog = async(req, res) => {
     try {

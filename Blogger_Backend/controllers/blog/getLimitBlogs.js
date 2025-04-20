@@ -1,4 +1,4 @@
-import { Blog } from "../../models";
+import { Blog } from "../../models/blog.js";
 
 export const getLimitBlogs = async (req, res) => {
   try {

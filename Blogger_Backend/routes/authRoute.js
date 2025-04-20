@@ -2,7 +2,9 @@ import express from 'express';
 const router = express.Router();
 import Joi from 'joi';
 import { createValidator } from 'express-joi-validation';
-import { postRegister, postLogin } from '../controllers';
+import {  postLogin } from '../controllers/authentication/postLogin.js';
+import { postRegister } from '../controllers/authentication/postRegister.js';
+
 const validator = createValidator({});
 
 const registerSchema = Joi.object({

@@ -1,4 +1,5 @@
-import { Blog, User } from '../../models';
+import { Blog } from '../../models/blog.js';
+import { User } from '../../models/user.js';
 
 export const createBlog = async(req, res) => {
     try {

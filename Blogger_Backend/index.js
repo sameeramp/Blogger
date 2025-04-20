@@ -4,8 +4,9 @@ import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import db from './dbConnection.js';
 import authRoute from './routes/authRoute.js';
-import blogRoute from './routes/blogRoute';
-import contactRoute from './routes/contactRoute';
+import blogRoute from './routes/blogRoute.js';
+
+import contactRoute from './routes/contactRoute.js';
 import { config } from 'dotenv';
 config();
 
